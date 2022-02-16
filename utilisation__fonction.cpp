@@ -32,7 +32,7 @@ int main()
 
     phraseInverse=inversePhrase(phrase, k);
 
-    cout <<phraseInverse << endl;
+    cout <<phraseInverse;
 
     return 0;
 }
