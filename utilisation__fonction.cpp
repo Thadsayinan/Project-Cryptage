@@ -11,7 +11,7 @@ string inversePhrase(string phrase, int k)
     for (i = k - 1; i >= 0; i--)
     {
 
-        phrase[i] = phrase[i];
+       
 
         if ((phrase[i] >= 97 && phrase[i] <= 122) || (phrase[i] >= 97 && phrase[i] <= 122))
             phrase[i] = phrase[i] + 2;

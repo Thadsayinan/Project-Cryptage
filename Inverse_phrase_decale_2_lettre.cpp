@@ -17,14 +17,16 @@ int main()
     {
 
         
-        tabPhrase[i]= tabPhrase[i];
+      
       
         if ((tabPhrase[i]  >= 97 && tabPhrase[i] <=122 )||(tabPhrase[i]  >= 97 && tabPhrase[i] <=122 ))
-         tabPhrase[i] =tabPhrase[i]+2;
-
-        cout << tabPhrase[i];
-        //strncpy(tabColle,tabPhrase,strlen(tabPhrase));
+         
+         tabInverse[j] =tabPhrase[i]+2;
+           j++;
+        
+        
     }
+    cout << tabInverse;
 
     return 0;
 }

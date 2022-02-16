@@ -5,20 +5,34 @@
 #include <string>
 using namespace std;
 
-string inversePhrase(string phrase, int k)
+string inversePhrase(string phrase)
 {
-    int i,nbre;
+    int i, nbre, j = 0;
+
     string phraseCodee;
-    for (i = k - 1; i >= 0; i--)
+    cout << "Entrez un cle svp " << endl;
+    cin >> nbre;
+    for (i = phrase.length(); i >= 0; i--)
     {
 
-        //phrase[i] = phrase[i];
 
-         if (phrase[i]>='A'&&phrase[i]<='Z')
-            phraseCodee[i]=(((phrase[i]-65)+nbre)%26)+65;
-        else if( phrase[i]>='a'&&phrase[i]<='z')
-            phraseCodee[i]=(((phrase[i]-97)+nbre)%26)+97;
+      // cout<<phrase<<endl;
+       // cout<<i<<endl;
+        for (j = 0; j < phrase.length(); j++)
+
+        {
+            if (phrase[i] >= 'A' && phrase[i] <= 'Z')
+
+                phraseCodee[j] = phrase[i]+nbre;//(((phrase[i] - 65) + nbre) % 26) + 65;
+       
+
+            else if (phrase[i] >= 'a' && phrase[i] <= 'z')
+
+                phraseCodee[j] = phrase[i]+nbre;//(((phrase[i] - 97) + nbre) % 26) + 97;
+        }
+        
     }
+cout<<phraseCodee<<endl;
     return phraseCodee;
 }
 
@@ -31,11 +45,9 @@ int main()
     cout << "Tapez une phrase que vous voulez crypter svp !" << endl;
     getline(cin, phrase);
 
-    int k = phrase.length();
+    phraseInverse = inversePhrase(phrase);
 
-    phraseInverse=inversePhrase(phrase, k);
-
-    cout <<phraseInverse << endl;
+    cout << phraseInverse << endl;
 
     return 0;
 }
